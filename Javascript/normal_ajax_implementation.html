@@ -1,0 +1,49 @@
+<html>
+    
+<head>
+    <style>
+     img{
+         width: :150px;
+         height: 150px;
+        }
+    </style>
+    <script>
+    function printImages(images){
+        var div = document.querySelector('#imagediv');
+        div.innerHTML=" ";
+        images.forEach(image => {
+            let img = document.createElement('img');
+            img.src = image.images.original.url;
+            div.appendChild(img);
+        });
+    }
+        function callAjax(){
+            var value =document.querySelector('#value').value;
+            const url=`http://api.giphy.com/v1/gifs/search?q=${value}&api_key=vFRSFWo6g7vJ7ZAjt3DMDolU52ORTxwH&limit=2`;
+            console.log("before fetch");
+            var promise = fetch(url);
+            promise.then(response =>{
+                response.json().then(data =>{
+                    console.log('JSON recieved',data);
+                    printImages(data.data);
+                }).catch(err => {
+                    console.log("invalid JSON", err)
+                })
+            }).catch(err =>{
+                console.log('Server Error', err);
+            })
+            console.log("After fetch")
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="value" placeholder="Enter to search image">
+<button onclick="callAjax()">Search</button>
+<fieldset>
+    <legend>Output</legend>
+    <div id="imagediv">
+        
+    </div>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,40 @@
+var button_click = document.getElementById("button");
+
+
+button_click.onclick = function(){
+	
+	var city =document.getElementById("city").value;
+
+	const url='http://openweathermap.org/data/2.5/weather?q='+city+'&appid=b6907d289e10d714a6e88b30761fae22';
+	console.log("before fetch");
+	var promise = fetch(url);
+	promise.then(response =>{response.json()
+		   .then(data =>{
+	        	console.log('JSON recieved',data);
+	printWeather(data);
+	                })
+
+		   			.catch(err => {
+	                    console.log("invalid JSON", err)
+	                })})
+					.catch(err =>{
+	                console.log('Server Error', err);
+	            })
+	            console.log("After fetch")
+	};
+
+	   function printWeather(weather){
+        var div = document.querySelector('#infodiv');
+        div.innerHTML=" ";
+        var city=weather.name
+        var country = weather.sys.country;
+        var temp = weather.main.temp;
+        var pressure = weather.main.pressure;
+        var desc=weather.weather[0].description;
+        div.append("The weather in "+city+ " of country "+ country+ "  is currently "+desc);
+        let span = document.createElement('span');
+            span.innerHTML =" with temperature "+temp +" Celcius" + " and Pressure of "+pressure; 
+            div.appendChild(span);        
+               
+        
+    }

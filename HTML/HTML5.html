@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+<body>
+	<!--TABLE-->
+	<h1>Table</h1>
+
+	<table border="1">
+		<tr><caption>Employee Details</caption></tr>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>age</th>
+				<th>Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>112</td>
+				<td>John</td>
+				<td>21</td>
+				<td>chennai</td>
+			</tr>
+			<tr>
+				<td>114</td>
+				<td>MOhan</td>
+				<td>22</td>
+				<td rowspan="2">mumbai</td>
+			</tr>
+			<tr>
+				<td>115</td>
+				<td>ROhan</td>
+				<td>23</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3">The Total emoloyees</td>
+				<td>3</td>
+			</tr>
+		</tfoot>
+	</table>
+
+<!--Type of list can be 1,a,A,I,i-->
+<h1>Lists</h1>
+	<ol type="1">
+		<li>down</li>
+		<li>up</li>
+		<li>left</li>
+		<li>right</li>
+	</ol>
+
+<!--types: disc,circle,square,none-->	
+	<ul style="list-style-type: square;">
+		<li>down</li>
+		<li>up</li>
+		<li>left</li>
+		<li>right</li>
+	</ul>
+
+<!--links:-->
+<h1>Link</h1>
+	<a href="paragraph.html">Click</a>	
+<br>
+
+<!--image tag-->
+<h1>Image</h1>
+	<img src="imagesource.jpg" alt="image not avail  able"/>	
+
+<!--semantic-->
+<h1>Article</h1>
+	<article>
+		<header><h1>About the Page</h1></header>
+			<div id="content">
+				<article>
+					<header><h2>greatest page</h2></header>
+				</article>
+				<sidebar>
+					<ul>
+						<li><a href="/home">home page</a></li>
+						<li><a href="/profile">profile</a></li>
+			  			<li><a href="/feedback">feedback</a></li>
+					</ul>
+				</sidebar>	
+				<aside>...........</aside>
+				
+			</div>
+			<footer>copyright 2009</footer>
+	</article> 
+
+<br>
+<br>
+
+<h4> HTML Forms<br>
+->enables web application to collect info from users.<br>
+->used t interact bw user and a web site or web application.<br>
+->the data is sent to server on submit specified by action.
+  </h4>
+<h1>Form</h1>
+<form action="" autocomplete="" method="" novalidate="">
+	<input type="text" name="name">
+	<p>default input type is text others are:checkbox,radio,password,button,submit,reset,hidden,file,image</p>
+</form>	
+
+
+<p>
+<h2>Different input fields for forms</h2>
+	<h3>input field ATTRIBUTE:</h3>
+	#required(must be filled else warning)<br>
+	#autocomplete(based on previous requests)<br>
+	#autofocus(boolean attribute only one element can have autofocus as the element should automatically get focus whent thw page loads)<br>
+	#formaction(specifies url of the file by overriding forms action attribute that will process the input control)<br>
+	#formmethod(overrides method attribute of form)<br>
+	#formnovalidate(for a specific input field)<br>
+	#height and width<br>
+	#ist(used to bind datalist created with input type)<br>
+	<br>
+	#multple(user can enter multiple comma saperated values like email, pasasword etc)<br>
+	#pattern(regex)<br>
+	#placholder(hint for user)<br>
+	<h3>Input type restrictions:</h3>
+	<ul>
+		<li>Mina and Max</li>: max and min input val
+		<li>disabled</li>:input field should be disabled
+		<li>maxlength:</li>:max no. of characters for an input field
+		<li>pattern</li>:regular expression to check input against
+		<li>readonly</li>
+		<li>required</li>
+		<li>step</li>specifies legal number intervals for an input field
+		<li>value</li>	
+	</ul>
+
+
+	<br>
+	<br>
+	<h3>we have 13 data specific input types that provides native validation</h3>
+	<ul>
+		<li>Search</li> :used for search fields
+		<li>url</li>:should contains a url and validated on submission
+		<li>Datetime</li>
+		<li>Date</li>:date picker
+		<li>Month</li>:month picker
+		<li>Time</li>:time picker
+		<li>Number</li>:restricts user to input number only
+		<li>color</li>:color picker
+		<li>email</li>:email only
+		<li>tel</li>:for telephone number
+		<li>week</li>:week picker
+		<li>datetime-local</li>:date time picker
+		<li>range</li>
+	</ul>
+</p>
+
+
+
+  <h3>Input examples</h3>
+
+Name     <input type="text" name="name"><br>
+Password <input type="password" name="password"><br>
+Gender  Male:<input type="radio" name="gender" value="male" checked="checked">
+Female:<input type="radio" name="gender" value="female"><br>
+
+<select>
+	<option value="UG">UG</option>
+	<option value="PG">PG</option>
+</select>
+<input type="file" name="img">
+<br>
+Certification: Java <input type="checkbox" name="cert"/>
+		     Oracle<input type="checkbox" name="cert"/><br>
+
+Address <textarea name="address" cols="20" rows="5">
+</textarea>	<br>
+<input type="submit" name="submitdsk">
+<input type="reset" name="Reset"><br>	
+<input type="button" name="submit" value="submit">     
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Audio:</h1><h3>audio files are played through a plug-in</h3>
+
+<audio controls>
+<source src="Airplanes.mp3" type="audio/mp3"> 
+</audio>
+
+<h1>Video</h1><h3>Played through plug-in</h3>
+<video width="1600" height="500" controls>
+	<source src="TheVamps.mp4" type="video/mp4">
+</video>
+  
+</html>
