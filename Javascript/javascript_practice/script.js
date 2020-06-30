@@ -1,3 +1,7 @@
+// Javascript runs on js engine present in the browser and the first thing that happens inside the engine,is that our code is parsed by a parser,
+//which basically reads our code line by line, and checks if the syntax of the code that we gave it,
+
+is correct.
 //q1. Compare bmi after calculating and display in console.
 
 var mark_height = 5.8;
