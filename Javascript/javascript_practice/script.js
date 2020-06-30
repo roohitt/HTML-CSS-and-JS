@@ -1,7 +1,9 @@
 // Javascript runs on js engine present in the browser and the first thing that happens inside the engine,is that our code is parsed by a parser,
-//which basically reads our code line by line, and checks if the syntax of the code that we gave it,
+//which basically reads our code line by line, and checks if the syntax of the code that we gave it is correct.
+//if you make some mistakes, it basically throws an error and stops the execution.
+//If everything is correct though then the parser produces a data structure known as the Abstract Syntax Tree which is then translated into machine code.
+//So this code is no longer JavaScript code but a code, or let's say a set of instructions, that can be executed directly by the computer's processor.
 
-is correct.
 //q1. Compare bmi after calculating and display in console.
 
 var mark_height = 5.8;
